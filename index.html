@@ -1,23 +1,60 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Energia Solar by Sebasx2, Miguel y Jose</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!--barra de navegacion prueba 11111111111111111-->
-        <!--prueba-->
-        <!--prueba de jose-->
-        <!--prueba de miguel -->
-          <!--prueba de miguel 111 -->
-        <nav class="navbar">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energía Solar Interactiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la Energía Solar Interactiva</h1>
+        <nav>
             <ul>
-                <li><a class="#active" href="#casa">Home</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
-                <div class="logo">¿logo?</div>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#grafico">Gráfico Interactivo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
-    </body>
+    </header>
+
+    <section id="introduccion">
+        <h2>¿Qué es la Energía Solar?</h2>
+        <p>La energía solar es una fuente de energía renovable que aprovecha la radiación del sol para generar electricidad...</p>
+    </section>
+
+    <section id="beneficios">
+        <h2>Beneficios de la Energía Solar</h2>
+        <ul>
+            <li>Ahorro en costos de electricidad</li>
+            <li>Reducción de la huella de carbono</li>
+            <li>Independencia energética</li>
+        </ul>
+    </section>
+
+    <section id="grafico">
+        <h2>Producción Solar en Tiempo Real</h2>
+        <canvas id="graficoSolar"></canvas>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="formContacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Energía Solar Interactiva</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
+
