@@ -3,57 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energía Solar Interactiva</title>
+    <title>Energía Solar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a la Energía Solar Interactiva</h1>
+    <!-- Header -->
+    <header id="home">
         <nav>
             <ul>
-                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#que-es">¿Qué es la Energía Solar?</a></li>
                 <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="#grafico">Gráfico Interactivo</a></li>
+                <li><a href="#tipos">Tipos</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#casos">Casos de Éxito</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
+        <div class="header-content">
+            <h1>Energía Solar: El Futuro es Ahora</h1>
+            <p>Descubre cómo transformar la energía del sol en sostenibilidad y ahorro.</p>
+            <div class="cta-buttons">
+                <a href="#beneficios" class="btn">Explora más</a>
+                <a href="#contacto" class="btn">Solicita una cotización</a>
+                <a href="#que-es" class="btn">Aprende cómo funciona</a>
+            </div>
+        </div>
     </header>
+    
 
-    <section id="introduccion">
+    <!-- Sección: ¿Qué es la Energía Solar? -->
+    <section id="que-es">
         <h2>¿Qué es la Energía Solar?</h2>
-        <p>La energía solar es una fuente de energía renovable que aprovecha la radiación del sol para generar electricidad...</p>
+        <p>La energía solar es la luz y el calor del Sol, aprovechados mediante tecnologías como paneles fotovoltaicos y sistemas térmicos para producir electricidad y calor.</p>
+        <div class="content">
+            <img src="solar-panels.jpg" alt="Paneles solares">
+            <p>Esta fuente de energía renovable es inagotable y limpia, y juega un papel fundamental en la lucha contra el cambio climático.</p>
+        </div>
     </section>
+
 
     <section id="beneficios">
         <h2>Beneficios de la Energía Solar</h2>
-        <ul>
-            <li>Ahorro en costos de electricidad</li>
-            <li>Reducción de la huella de carbono</li>
-            <li>Independencia energética</li>
-        </ul>
+        <div class="benefits-grid">
+            <div class="benefit">
+                <h3>Ecológicos</h3>
+                <ul>
+                    <li>Reducción de emisiones de CO₂</li>
+                    <li>Disminución de la huella de carbono</li>
+                </ul>
+            </div>
+            <div class="benefit">
+                <h3>Económicos</h3>
+                <ul>
+                    <li>Ahorro en facturas eléctricas</li>
+                    <li>Incentivos y subsidios gubernamentales</li>
+                </ul>
+            </div>
+            <div class="benefit">
+                <h3>Energéticos</h3>
+                <ul>
+                    <li>Independencia energética</li>
+                    <li>Diversificación de la matriz energética</li>
+                </ul>
+            </div>
+        </div>
     </section>
+    
+    <section id="tipos">
+    <h2>Tipos de Sistemas Solares</h2>
+    <div class="system-types">
+        <div class="system">
+            <h3>Fotovoltaico</h3>
+            <p>Genera electricidad utilizando paneles solares. Ideal para hogares y negocios.</p>
+            <img src="fotovoltaico.jpg" alt="Sistema Fotovoltaico">
+        </div>
+        <div class="system">
+            <h3>Térmico</h3>
+            <p>Utiliza energía solar para calentar agua, común en aplicaciones domésticas.</p>
+            <img src="termico.jpg" alt="Sistema Térmico">
+        </div>
+        <div class="system">
+            <h3>Híbrido</h3>
+            <p>Combinación de sistemas fotovoltaicos y térmicos para un uso eficiente.</p>
+            <img src="hibrido.jpg" alt="Sistema Híbrido">
+        </div>
+    </div>
+</section>
 
-    <section id="grafico">
-        <h2>Producción Solar en Tiempo Real</h2>
-        <canvas id="graficoSolar"></canvas>
-    </section>
+<section id="calculadora">
+    <h2>Calculadora de Ahorro Energético</h2>
+    <form id="calcForm">
+        <label for="consumo">Consumo mensual de energía (kWh):</label>
+        <input type="number" id="consumo" required>
+        
+        <label for="ubicacion">Ubicación geográfica:</label>
+        <select id="ubicacion">
+            <option value="alta">Alta radiación</option>
+            <option value="media">Media radiación</option>
+            <option value="baja">Baja radiación</option>
+        </select>
+        
+        <button type="button" id="calcular">Calcular Ahorro</button>
+    </form>
+    <div id="resultado"></div>
+</section>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <form id="formContacto">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+<section id="casos">
+    <h2>Casos de Éxito</h2>
+    <div class="gallery">
+        <div class="case">
+            <img src="proyecto1.jpg" alt="Caso 1">
+            <h3>Empresa Walmart</h3>
+            <p>Reducción del 80% en costos energéticos.</p>
+        </div>
+        <div class="case">
+            <img src="proyecto2.jpg" alt="Caso 2">
+            <h3>Hogar Pérez</h3>
+            <p>Autonomía energética completa.</p>
+        </div>
+        <div class="case">
+            <img src="proyecto3.jpg" alt="Caso 3">
+            <h3>Institución XYZ</h3>
+            <p>Ahorro anual de $15,000 USD.</p>
+        </div>
+    </div>
+</section>
+<section id="blog">
+    <h2>Blog Educativo</h2>
+    <div class="posts">
+        <article>
+            <h3>Mitos y Realidades</h3>
+            <p>Descubre la verdad detrás de los mitos más comunes sobre la energía solar.</p>
+        </article>
+        <article>
+            <h3>¿Cómo Instalar Paneles?</h3>
+            <p>Guía práctica para instalar paneles solares en tu hogar.</p>
+        </article>
+    </div>
+</section>
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>¡Queremos escucharte! Llena el formulario o contáctanos directamente.</p>
+    <form id="contactForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" placeholder="Ingresa tu nombre" required>
+        
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" placeholder="Ingresa tu correo" required>
+        
+        <label for="message">Mensaje:</label>
+        <textarea id="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        
+        <button type="submit">Enviar</button>
+    </form>
+    <div id="mapa"></div>
+    <p class="info-extra">Teléfono: +57 3113799303| Email: jose.seir@gmail.com</p>
+</section>
 
+<section id="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <div class="faq-container">
+        <div class="faq">
+            <h3>¿Cuánto cuesta instalar paneles solares? <span class="toggle">+</span></h3>
+            <p class="answer">El costo depende del tamaño del sistema y las necesidades energéticas. En promedio, varía entre $5,000 y $15,000 USD.</p>
+        </div>
+        <div class="faq">
+            <h3>¿Qué mantenimiento requieren los paneles solares? <span class="toggle">+</span></h3>
+            <p class="answer">Los paneles requieren limpieza regular para maximizar la eficiencia y revisiones cada 2 años.</p>
+        </div>
+        <div class="faq">
+            <h3>¿Funcionan los paneles en días nublados? <span class="toggle">+</span></h3>
+            <p class="answer">Sí, aunque generan menos energía. Dependen de la luz solar, no del calor.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Más secciones aquí -->
     <footer>
-        <p>&copy; 2024 Energía Solar Interactiva</p>
+        <p>&copy; 2024 Energía Solar. Todos los derechos reservados.</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
