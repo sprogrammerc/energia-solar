@@ -18,7 +18,11 @@ header h1 {
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
-
+  nav .logo img {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
 header .btn {
     display: inline-block;
     padding: 10px 20px;
