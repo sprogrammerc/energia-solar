@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto Solar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="home">
+        <div class="header-content">
+            <h1>Energía Solar: El Futuro es Ahora</h1>
+            <p>Descubre cómo transformar la energía del sol en sostenibilidad y ahorro</p>
+            <div class="cta-buttons">
+                <a href="index.html" class="btn">Historia</a>
+                <a href="datosglobales.html" class="btn">Datos Globales</a>
+                <a href="calculadora.html" class="btn">Calculadora</a>
+                <a href="graficos.html" class="btn">Graficos</a>
+                <a href="contacto.html" class="btn">Contacto</a>
+            </div>
+        </div>
+    </header>
+    
+<section id="calculadora">
+    <h2>Calculadora de Ahorro Energético</h2>
+    <form id="calcForm">
+        <label for="consumo">Consumo mensual de energía (kWh):</label>
+        <input type="number" id="consumo" required>
+        
+        <label for="ubicacion">Ubicación geográfica:</label>
+        <select id="ubicacion">
+            <option value="alta">Alta radiación</option>
+            <option value="media">Media radiación</option>
+            <option value="baja">Baja radiación</option>
+        </select>
+        
+        <button type="button" id="calcular">Calcular Ahorro</button>
+    </form>
+    <div id="resultado"></div>
+</section>
+
+
+
+
+
+
+
+    <!-- Más secciones aquí -->
+    <footer>
+        <p>&copy; 2024 Impacto Solar. Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
