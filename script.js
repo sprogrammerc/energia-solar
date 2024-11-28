@@ -21,6 +21,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// Datos de energía renovable (solo un ejemplo)
+const datosEnergiaRenovable = [
+    { año: 2010, capacidadInstaladaRenovable: 100, produccionTotal: 1000 },
+    { año: 2015, capacidadInstaladaRenovable: 200, produccionTotal: 1500 },
+    { año: 2020, capacidadInstaladaRenovable: 300, produccionTotal: 2000 },
+];
+
+// Función para calcular el porcentaje de energía renovable
+function calcularPorcentajeEnergiaRenovable(consumoTotal) {
+    const capacidadInstaladaRenovableTotal = datosEnergiaRenovable.reduce((acumulado, dato) => acumulado + dato.capacidadInstaladaRenovable, 0);
+    const produccionTotalRenovable = datosEnergiaRenovable.reduce((acumulado, dato) => acumulado + dato.produccionTotal, 0);
+    const porcentajeEnergiaRenovable = (capacidadInstaladaRenovableTotal / produccionTotalRenovable) * 100;
+    const porcentajeEnergiaRenovableConsumoTotal = (porcentajeEnergiaRenovable / 100) * consumoTotal;
+    return porcentajeEnergiaRenovableConsumoTotal;
+}
+
+// Evento para calcular el porcentaje de energía renovable
+document.getElementById('boton_calcular').addEventListener('click', (e) => {
+    e.preventDefault();
+    const consumoTotal = parseFloat(document.getElementById('consumo_total').value);
+    const porcentajeEnergiaRenovable = calcularPorcentajeEnergiaRenovable(consumoTotal);
+    document.getElementById('resultado').innerHTML = `El porcentaje de energía renovable en su consumo eléctrico total es: ${porcentajeEnergiaRenovable.toFixed(2)}%`;
+});
+
 // Añadir interactividad al diagrama (simulación de clic)
 document.querySelector(".diagram img").addEventListener("click", function () {
     alert("El efecto fotovoltaico convierte la luz solar en energía utilizable.");
@@ -90,27 +114,6 @@ document.getElementById("contactForm").addEventListener("submit", function (even
     document.getElementById("contactForm").reset();
 });
 
-// Integración de un mapa interactivo (Google Maps API)
-function initMap() {
-    const location = { lat: 4.60971, lng: -74.08175 }; // Bogotá, Colombia
-    const map = new google.maps.Map(document.getElementById("mapa"), {
-        zoom: 12,
-        center: location,
-    });
-    new google.maps.Marker({
-        position: location,
-        map: map,
-    });
-}
-
-// Cargar mapa dinámicamente
-window.onload = function () {
-    const script = document.createElement("script");
-    script.src = "https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&callback=initMap";
-    script.async = true;
-    document.head.appendChild(script);
-};
-
 // Funcionalidad interactiva del FAQ
 document.querySelectorAll(".faq").forEach(faq => {
     faq.addEventListener("click", () => {
@@ -126,4 +129,5 @@ document.querySelectorAll(".faq").forEach(faq => {
         }
     });
 });
+
 
