@@ -130,4 +130,36 @@ document.querySelectorAll(".faq").forEach(faq => {
     });
 });
 
+function calculateRenewable() {
+    // Obtener el consumo total del usuario
+    const totalConsumption = parseFloat(document.getElementById('totalConsumption').value);
+    if (isNaN(totalConsumption) || totalConsumption <= 0) {
+      alert("Por favor, ingrese un consumo válido.");
+      return;
+    }
+
+    // Capacidades instaladas de fuentes renovables
+    const renewableFactors = {
+      eolica: 0.00068,
+      solar: 0.00359,
+      hidroelectrica: 0.67680,
+      geotermica: 0.31894
+    };
+
+    // Cálculo de porcentajes
+    const eolicaPercentage = totalConsumption * renewableFactors.eolica;
+    const solarPercentage = totalConsumption * renewableFactors.solar;
+    const hidroelectricaPercentage = totalConsumption * renewableFactors.hidroelectrica;
+    const geotermicaPercentage = totalConsumption * renewableFactors.geotermica;
+
+    // Mostrar los resultados
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = `
+      <p><strong>Energía Eólica:</strong> ${eolicaPercentage.toFixed(2)} kWh (${((eolicaPercentage / totalConsumption) * 100).toFixed(2)}%)</p>
+      <p><strong>Energía Solar:</strong> ${solarPercentage.toFixed(2)} kWh (${((solarPercentage / totalConsumption) * 100).toFixed(2)}%)</p>
+      <p><strong>Energía Hidroeléctrica:</strong> ${hidroelectricaPercentage.toFixed(2)} kWh (${((hidroelectricaPercentage / totalConsumption) * 100).toFixed(2)}%)</p>
+      <p><strong>Energía Geotérmica:</strong> ${geotermicaPercentage.toFixed(2)} kWh (${((geotermicaPercentage / totalConsumption) * 100).toFixed(2)}%)</p>
+    `;
+  }
+
 
