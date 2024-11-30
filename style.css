@@ -222,15 +222,15 @@ form button:hover {
 }
 /* Casos de Éxito */
 #casos {
-    padding: 50px;
-    background-color: #F9F9F9;
+    padding: 10px;
+    background-color: #f5f3e8;
     text-align: center;
 }
 
 .gallery {
     display: flex;
-    flex-direction: column; /* Organización vertical de las tarjetas */
-    gap: 20px; /* Espaciado entre tarjetas */
+     /* Organización vertical de las tarjetas */
+    gap: 50px; /* Espaciado entre tarjetas */
 }
 
 .case {
@@ -238,21 +238,21 @@ form button:hover {
     flex-direction: column; /* Imagen arriba, contenido abajo */
     align-items: center;
     width: 100%; /* Ocupa todo el ancho del contenedor */
-    background: white;
+    background: #faf8f8;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, ;
 }
 
 .case:hover {
-    transform: scale(1.02); /* Efecto de agrandamiento ligero */
+    transform: scale(1.05); /* Efecto de agrandamiento ligero */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .case img {
     width: 100%; /* Imagen ocupa todo el ancho disponible */
-    max-width: 700px; /* Tamaño máximo */
+    max-width: 500px; /* Tamaño máximo */
     height: auto; /* Mantiene proporción */
     border-radius: 15px;
     margin-bottom: 20px; /* Espaciado entre imagen y contenido */

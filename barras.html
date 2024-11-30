@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impacto Solar</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Año', 'E. Hidroelectrica','E. Eolica', 'E. Solar', 'E. Biocombustibles'],
+          ['2018', 59.16, 0.04, 0.02, 89.3],
+          ['2019', 52.98, 0.06, 0.13, 79.7],
+          ['2020', 48.44, 0.01, 0.19, 74.9],
+          ['2021', 58.19, 0.06, 0.32, 80.0]
+        ]);
+
+        var options = {
+          chart: {
+          }
+        };
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
 </head>
 
 <body>
@@ -32,43 +54,21 @@
     
 <section id="casos">
     <h2>Graficos Energia Renovable</h2>
-    <div class="gallery">
-        
+                
         <div class="case">
-
             <h3>Gráfico de Barras:</h3>
-            <p>Producción de Energía Renovable por Fuente</p>         
-            <a href="barras.html" class="btn">Ver</a>   
-        </div>
-
-        <div class="case">
-            
-            <h3>Gráfico de Torta:</h3>
-            <p>Participación de Energías Renovables.</p>
-            <a href="torta.html" class="btn">Ver</a>
-        </div>
-
-        <div class="case">
-           
-            <h3>Gráfico de Líneas:</h3>
-            <p>Tendencia en la Capacidad Instalada.</p>
-            <a href="lineas.html" class="btn"> Ver </a> 
-        </div>
-
-        <div class="case">
-            
-            <h3>Gráfico de Área:</h3>
-            <p>Comparación entre Consumo de Energía Renovable y Convencional.</p>
-            <a href="area.html" class="btn"> Ver </a> 
-        </div>
-    </div>
+            <p>Producción de Energía Renovable en Colombia por cada Fuente (Twh).</p>
+            <div class="container">
+                <section>
+                    <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
+               </section>
+        </div>     
 </section>
 
     <!-- Más secciones aquí -->
     <footer>
         <p>&copy; 2024 Impacto Solar. Todos los derechos reservados.</p>
     </footer>
-    <script src="script.js"></script>
+   
 </body>
 </html>
-

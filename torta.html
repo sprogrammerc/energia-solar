@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impacto Solar</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Energia', 'Produccion Twh'],
+          ['Energia Eolica',  0.078],
+          ['Energia Hidroelectrica', 67.8],
+          ['Energia Solar',  0.66],
+          ['Energia Renovable', 69.4],
+                
+        ]);
+
+        var options = {
+          title: 'Energias Renovables Colombia 2019',
+          is3D: true,
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 
 <body>
@@ -31,44 +53,25 @@
     </header>
     
 <section id="casos">
+    
     <h2>Graficos Energia Renovable</h2>
-    <div class="gallery">
-        
-        <div class="case">
-
-            <h3>Gráfico de Barras:</h3>
-            <p>Producción de Energía Renovable por Fuente</p>         
-            <a href="barras.html" class="btn">Ver</a>   
-        </div>
-
+    
+              
         <div class="case">
             
             <h3>Gráfico de Torta:</h3>
             <p>Participación de Energías Renovables.</p>
-            <a href="torta.html" class="btn">Ver</a>
-        </div>
-
-        <div class="case">
-           
-            <h3>Gráfico de Líneas:</h3>
-            <p>Tendencia en la Capacidad Instalada.</p>
-            <a href="lineas.html" class="btn"> Ver </a> 
-        </div>
-
-        <div class="case">
-            
-            <h3>Gráfico de Área:</h3>
-            <p>Comparación entre Consumo de Energía Renovable y Convencional.</p>
-            <a href="area.html" class="btn"> Ver </a> 
-        </div>
-    </div>
+            <div class="container">
+                <section>
+                  <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+               </section>
+        </div>     
 </section>
 
     <!-- Más secciones aquí -->
     <footer>
         <p>&copy; 2024 Impacto Solar. Todos los derechos reservados.</p>
     </footer>
-    <script src="script.js"></script>
+   
 </body>
 </html>
-

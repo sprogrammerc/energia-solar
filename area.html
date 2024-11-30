@@ -5,6 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impacto Solar</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'E. Convencional', 'E. Renovable'],
+          ['2021',  1000,      400],
+          ['2020',  1170,      460],
+          ['2019',  660,       1120],
+          ['2018',  1030,      540]
+          
+        ]);
+
+        var options = {
+          title: 'Consumo de energia en Twh',
+          hAxis: {title: 'Año',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 
 <body>
@@ -31,44 +56,25 @@
     </header>
     
 <section id="casos">
+    
     <h2>Graficos Energia Renovable</h2>
-    <div class="gallery">
-        
-        <div class="case">
-
-            <h3>Gráfico de Barras:</h3>
-            <p>Producción de Energía Renovable por Fuente</p>         
-            <a href="barras.html" class="btn">Ver</a>   
-        </div>
-
-        <div class="case">
-            
-            <h3>Gráfico de Torta:</h3>
-            <p>Participación de Energías Renovables.</p>
-            <a href="torta.html" class="btn">Ver</a>
-        </div>
-
-        <div class="case">
-           
-            <h3>Gráfico de Líneas:</h3>
-            <p>Tendencia en la Capacidad Instalada.</p>
-            <a href="lineas.html" class="btn"> Ver </a> 
-        </div>
-
+    
+              
         <div class="case">
             
             <h3>Gráfico de Área:</h3>
             <p>Comparación entre Consumo de Energía Renovable y Convencional.</p>
-            <a href="area.html" class="btn"> Ver </a> 
-        </div>
-    </div>
+            <div class="container">
+                <section>
+                    <div id="chart_div" style="width: 100%; height: 500px;"></div>
+               </section>
+        </div>     
 </section>
 
     <!-- Más secciones aquí -->
     <footer>
         <p>&copy; 2024 Impacto Solar. Todos los derechos reservados.</p>
     </footer>
-    <script src="script.js"></script>
+   
 </body>
 </html>
-
