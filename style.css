@@ -65,25 +65,62 @@ header h1 {
 
 /* Sección ¿Qué es la Energía Solar? */
 section {
-    padding: 20px;
+    padding: 8px;
 }
 
 section h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 5px #353535;
+    text-decoration: overline underline;
+    text-decoration-color: #fac106;
 }
 
 section p {
-    font-size: 1.2rem;
-    line-height: 1.6;
+    font-size: 1;
+    line-height: 1.2;
+    font-weight: normal;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+section h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px #353535;
+}
+
+section ul{
+    box-align: left;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+section ol {
+    box-align: left;
+    margin-left: 200px;
+    margin-right: 200px;
+    font-weight: normal;
+}
+
+section h4 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px #353535;
+    text-decoration: overline underline;
+    text-decoration-color: #fac106;
 }
 
 section img {
     width: 100%;
-    max-width: 600px;
+    max-width: 400px;
     display: block;
     margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(73, 73, 73, 0.5);
 }
 
 /* Sección Beneficios */
