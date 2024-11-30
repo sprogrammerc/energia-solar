@@ -7,28 +7,38 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+        google.charts.load('current', {packages: ['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'E. Convencional', 'E. Renovable'],
-          ['2021',  1000,      400],
-          ['2020',  1170,      460],
-          ['2019',  660,       1120],
-          ['2018',  1030,      540]
-          
-        ]);
+        function drawChart() {
+            // Datos
+            var data = google.visualization.arrayToDataTable([
+                ['Año', 'Energía Renovable (TWh)', 'Energía Convencional (TWh)'],
+                [2014, 47565.181, 33982.081],
+                [2015, 4135.271, 33018.939],
+                [2016, 23482.744, 109098.932],
+                [2017, 10374.472, 37960.678],
+                [2018, 36972.974, 3714.078],
+                [2019, 13786.086, 36228.819],
+                [2020, 47339.297, 10258.537],
+                [2021, 54895.984, 78067.166]
+            ]);
 
-        var options = {
-          title: 'Consumo de energia en Twh',
-          hAxis: {title: 'Año',  titleTextStyle: {color: '#333'}},
-          vAxis: {minValue: 0}
-        };
+            // Opciones de la gráfica
+            var options = {
+                title: 'Consumo Energético en Estados Unidos (TWh)',
+                hAxis: {title: 'Año', format: '####'},
+                vAxis: {title: 'Consumo (TWh)', format: 'decimal'},
+                isStacked: true,
+                areaOpacity: 0.6,
+                colors: ['#4CAF50', '#FF5722'], // Colores para las áreas
+                legend: {position: 'bottom'}
+            };
 
-        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
+            // Renderizar gráfica
+            var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+        }
     </script>
 </head>
 
@@ -54,16 +64,12 @@
             </div>
         </div>
     </header>
-    
-<section id="casos">
-    
-    <h2>Graficos Energia Renovable</h2>
-    
-              
-        <div class="case">
-            
+
+<section id="casos5">
+        <h2>Graficos Energia Renovable</h2>             
+        <div class="case5">
             <h3>Gráfico de Área:</h3>
-            <p>Comparación entre Consumo de Energía Renovable y Convencional.</p>
+            <p>Comparación entre Consumo de Energía Renovable y Energía Convencional en EE.UU en el perido 2014 - 2021.</p>
             <div class="container">
                 <section>
                     <div id="chart_div" style="width: 100%; height: 500px;"></div>

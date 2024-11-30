@@ -10,46 +10,48 @@
       google.charts.load('current', {'packages':['line']});
       google.charts.setOnLoadCallback(drawChart);
 
-    function drawChart() {
+      function drawChart() {
 
-      var data = new google.visualization.DataTable();
-      data.addColumn('number', 'Año');
-      data.addColumn('number', 'E. Eolica');
-      data.addColumn('number', 'E. Solar');
-      data.addColumn('number', 'E. Geotermica');
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Años');
+        data.addColumn('number', 'E. Eólica');
+        data.addColumn('number', 'E. Solar');
+        data.addColumn('number', 'E. Geotérmica');
 
-      data.addRows([
-        [2021,  37.8, 80.8, 41.8],
-        [2020,  30.9, 69.5, 32.4],
-        [2019,  25.4,   57, 25.7],
-        [2018,  11.7, 18.8, 10.5],
-        [2017,  11.9, 17.6, 10.4],
-        [2016,   8.8, 13.6,  7.7],
-        [2015,   7.6, 12.3,  9.6],
-        [2014,  12.3, 29.2, 10.6],
-        [2013,  16.9, 42.9, 14.8],
-        [2012, 12.8, 30.9, 11.6],
-        [2011,  5.3,  7.9,  4.7],
-        [2010,  6.6,  8.4,  5.2],
-      ]);
+        data.addRows([
+          [2021, 132737,	93713,	0   ],
+          [2020, 118731,	73813,	2587],
+          [2019, 104052,	59068,	2555],
+          [2018,  94516,	49812,	2540],
+          [2017,  87597,	41357,	2483],
+          [2016,  81286,	32958,	2517],
+          [2015,  72573,	21684,	2542],
+          [2014,  64232,	15984,	2514],
+          [2013,  59973,	11759,	2607],
+          [2012,  59075,	8137,	  2592],
+          [2011,  45676,	5172,	  2409],
+          [2010,  39135,	2909,	  2405],
+        ]);
 
-      var options = {
-        chart: {
-        },
-        width: 900,
-        height: 500,
-        axes: {
-          x: {
-            0: {side: 'top'}
+        var options = {
+          chart: {},
+          width: 1000,
+          height: 500,
+          hAxis: {
+            format: '####', // Muestra el año completo sin formato adicional
+            title: 'Años'   // Título del eje X
+          },
+          vAxis: {
+            format: 'decimal', // Muestra los números completos sin abreviaturas
+            title: 'Energía (GWh)' // Título del eje Y
           }
-        }
-      };
+        };
 
-      var chart = new google.charts.Line(document.getElementById('line_top_x'));
+        var chart = new google.charts.Line(document.getElementById('line_top_x'));
 
-      chart.draw(data, google.charts.Line.convertOptions(options));
-    }
-  </script>
+        chart.draw(data, google.charts.Line.convertOptions(options));
+      }
+    </script>
 </head>
 
 <body>
@@ -83,12 +85,15 @@
         <div class="case">
             
             <h3>Gráfico de Lineas:</h3>
-            <p>Tendencia en la Capacidad Instalada de las diferentes fuentes de Energia en Colombia.</p>
+            <p>Tendencia en la Capacidad Instalada de las diferentes fuentes de Energia en EE.UU.</p>
             <div class="container">
                 <section>
                     <div id="line_top_x"></div>
                </section>
-        </div>     
+        </div>   
+        <p>El gráfico de lineas muestra la capacidad instalada de las diversas fuentes de energias 
+           renovables de EE.UU, en esta se puede observar el crecimiento de la energia EOLICA, SOLAR Y GEOTERMICA
+           desde el año 2010 a 2021</p>    
 </section>
 
     <!-- Más secciones aquí -->
