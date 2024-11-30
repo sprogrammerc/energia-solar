@@ -192,28 +192,51 @@ form button:hover {
 
 .gallery {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    flex-direction: column; /* Organización vertical de las tarjetas */
+    gap: 20px; /* Espaciado entre tarjetas */
 }
 
 .case {
-    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column; /* Imagen arriba, contenido abajo */
+    align-items: center;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
     background: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case:hover {
+    transform: scale(1.02); /* Efecto de agrandamiento ligero */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .case img {
-    width: 100%;
-    border-radius: 10px;
+    width: 100%; /* Imagen ocupa todo el ancho disponible */
+    max-width: 700px; /* Tamaño máximo */
+    height: auto; /* Mantiene proporción */
+    border-radius: 15px;
+    margin-bottom: 20px; /* Espaciado entre imagen y contenido */
 }
 
 .case h3 {
-    margin: 15px 0 10px;
-    font-size: 1.2rem;
+    font-size: 1.8rem; /* Tamaño de fuente más grande */
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center; /* Centrado */
 }
+
+.case p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    text-align: center; /* Centrado */
+    margin: 0 auto;
+    max-width: 600px; /* Limitar el ancho del texto */
+}
+
 /* Blog */
 #blog {
     padding: 50px;
@@ -301,3 +324,4 @@ form button:hover {
     padding-top: 10px;
     color: #666;
 }
+

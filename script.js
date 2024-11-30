@@ -140,10 +140,10 @@ function calculateRenewable() {
 
     // Capacidades instaladas de fuentes renovables
     const renewableFactors = {
-      eolica: 0.00068,
-      solar: 0.00359,
-      hidroelectrica: 0.67680,
-      geotermica: 0.31894
+      eolica: 0.00080,
+      solar: 0.00167,
+      hidroelectrica: 0.688430,
+      geotermica: 0.30910
     };
 
     // Cálculo de porcentajes
