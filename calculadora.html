@@ -32,22 +32,27 @@
     
     
 <section id="calculadora">
-    
 
-    <form id="formulario">
-        <label for="consumo_total">Consumo eléctrico total (kWh):</label>
-        <input type="number" id="consumo_total" required>
-        <button id="boton_calcular">Calcular Ahorro</button>
-    </form>
-    <script src="script.js"></script>
-    <div id="resultado"></div>
+    <div class="container">
+        <h1>Estimación de Energía Renovable</h1>
+        <form id="renewableForm">
+          <label for="totalConsumption">Consumo eléctrico total (kWh):</label>
+          <input type="number" id="totalConsumption" min="0" step="any" required>
+          <button type="button" onclick="calculateRenewable()">Calcular</button>
+        </form>
+        <div class="result" id="result">
+          <!-- Los resultados aparecerán aquí -->
+        </div>
+      </div>
+
+    
 </section>
 
     <!-- Más secciones aquí -->
     <footer>
         <p>&copy; 2024 Impacto Solar. Todos los derechos reservados.</p>
     </footer>
-    
+     <script src="script.js"></script>
 </body>
 </html>
 
