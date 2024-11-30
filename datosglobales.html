@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impacto Solar</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
+
+
 </head>
 
 <body>
@@ -29,30 +37,260 @@
             </div>
         </div>
     </header>
-    
-    
+
+
     <section id="tipos">
-    <h2>Tipos de Sistemas Solares</h2>
-    <div class="system-types">
-        <div class="system">
-            <h3>Fotovoltaico</h3>
-            <p>Genera electricidad utilizando paneles solares. Ideal para hogares y negocios.</p>
-            <img src="imagenes/fotovoltaico.jpg" alt="Sistema Fotovoltaico">
+        <h2>Tipos de Sistemas Solares</h2>
+        <div class="system-types">
+            <div class="system">
+                <h3>Fotovoltaico</h3>
+                <p>Genera electricidad utilizando paneles solares. Ideal para hogares y negocios.</p>
+                <img src="imagenes/fotovoltaico.jpg" alt="Sistema Fotovoltaico">
+            </div>
+            <div class="system">
+                <h3>Térmico</h3>
+                <p>Utiliza energía solar para calentar agua, común en aplicaciones domésticas.</p>
+                <img src="imagenes/termico.jpg" alt="Sistema Térmico">
+            </div>
+            <div class="system">
+                <h3>Híbrido</h3>
+                <p>Combinación de sistemas fotovoltaicos y térmicos para un uso eficiente.</p>
+                <img src="imagenes/hibrido.jpg" alt="Sistema Híbrido">
+            </div>
         </div>
-        <div class="system">
-            <h3>Térmico</h3>
-            <p>Utiliza energía solar para calentar agua, común en aplicaciones domésticas.</p>
-            <img src="imagenes/termico.jpg" alt="Sistema Térmico">
-        </div>
-        <div class="system">
-            <h3>Híbrido</h3>
-            <p>Combinación de sistemas fotovoltaicos y térmicos para un uso eficiente.</p>
-            <img src="imagenes/hibrido.jpg" alt="Sistema Híbrido">
-        </div>
-    </div>
-</section>
+    </section>
+
+        <h1>Contexto</h1>
+         <h3>La generación y consumo de energía solar en Colombia ha crecido de manera notable entre 2000 y 2021, en línea con los esfuerzos globales para diversificar las fuentes energéticas y promover las energías renovables. Sin embargo, este crecimiento ha sido más notorio en los últimos años debido a avances tecnológicos, reducción de costos y políticas gubernamentales enfocadas en las energías limpias. A continuación, se presentan los principales datos y tendencias para este período:</h3>
+            
+            <h2>Contexto General (2000-2021):</h2>
+            
+            <h3>1.	Bajo desarrollo inicial (2000-2015):</h3>
+                <ul>
+                    <li>Antes de 2015, el uso de energía solar en Colombia era muy limitado. El país dependía principalmente de la hidroeléctrica (alrededor del 65-70% de su matriz energética).</li>
+                    <li>La energía solar se utilizaba principalmente en aplicaciones fuera de la red (off-grid), especialmente en zonas rurales y aisladas.</li>
+                </ul>
+            <h3>2.	Aceleración post-2015:</h3>
+                <ul>
+                   <li>La Ley 1715 de 2014 marcó un punto de inflexión al promover el desarrollo de fuentes no convencionales de energía renovable (FNCER), incluyendo la solar, con incentivos fiscales y arancelarios.</li>
+                   <li>A partir de 2018, el gobierno impulsó subastas de energía renovable, favoreciendo proyectos solares y eólicos.</li>
+                </ul>
+            <h2>Crecimiento en Capacidad Instalada:</h2>
+            
+                <h3>• 2000-2010:</h3> 
+                    <p>Capacidad instalada casi inexistente, limitada a pequeñas instalaciones para autoconsumo.</p>
+                <h3>• 2015:</h3>
+                    <p> Menos de 1 MW de capacidad instalada.</p>
+                <h3>• 2020:</h3>
+                    <p>o	Alrededor de 200 MW de capacidad solar instalada.</p>
+                <h3>• 2021:</h3>
+                    <p>Capacidad instalada superó los 700 MW, gracias a la finalización de proyectos a gran escala como Celsia Solar Yumbo y Pétalo Solar.</p> 
+            
+
+            <h2>Generación de Energía Solar:</h2>
+            
+                <h3>• 2010: Casi inexistente en el total de generación eléctrica.</h3>
+                <h3>• 2021: La energía solar representó aproximadamente el 1% de la generación total del país, pero su participación crece rápidamente.</h3>
+            
+            <h2>Consumo de Energía Solar:</h2>
+            
+                <h3>• Principalmente en:</h3>
+                    <ul>
+                        <li>1.Zonas rurales: Donde es más costoso extender la red eléctrica convencional.</li>
+                        <li>2.Industrias y empresas urbanas: Con sistemas de autoconsumo conectados a la red.</li> 
+                        <li>3.Proyectos de electrificación rural: Impulsados por programas gubernamentales y ONGs.</li>
+                    </ul>
+            
+            
+            <h2>Factores Clave del Crecimiento:</h2>
+            <h3>
+            1.	Potencial solar: Colombia tiene un recurso solar abundante, con niveles de irradiación promedio de 4-6 kWh/m²/día, especialmente en regiones como La Guajira y el Caribe.
+            2.	Reducción de costos: Los precios de los paneles solares cayeron drásticamente durante este período.
+            3.	Políticas gubernamentales: Incentivos fiscales y proyectos piloto.
+             </h3>
+            
+           <h2> Desafíos:</h2>
+           <h3>
+            1.	Infraestructura: Limitaciones en la red de transmisión para integrar proyectos solares en regiones remotas.
+            2.	Regulación: Necesidad de mayor simplificación y apoyo para pequeñas instalaciones residenciales.
+            3.	Financiamiento: Aunque ha mejorado, muchos proyectos enfrentan dificultades para asegurar financiamiento.
+            </h3>
+        
+           <h3>En resumen, aunque la energía solar tuvo un inicio lento en Colombia, entre 2015 y 2021 experimentó un crecimiento acelerado, posicionándose como un componente clave en la diversificación de la matriz energética del país. La tendencia apunta a una expansión significativa en los años siguientes, alineada con los compromisos de sostenibilidad y descarbonización.</h3> 
+            
 
 
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+    <h1>Electricity from Solar in Colombia</h1>
+    <table id="solarTable">
+        <thead>
+            <tr>
+                <th>Entity</th>
+                <th>Code</th>
+                <th>Year</th>
+                <th>Electricity from solar (TWh)</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2000</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2001</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2002</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2003</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2004</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2005</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2006</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2007</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2008</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2009</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2010</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2011</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2012</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2013</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2014</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2015</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2016</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2017</td>
+                <td>0.01</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2018</td>
+                <td>0.02</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2019</td>
+                <td>0.13</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2020</td>
+                <td>0.19</td>
+            </tr>
+            <tr>
+                <td>Colombia</td>
+                <td>COL</td>
+                <td>2021</td>
+                <td>0.32</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <script>
+        // Activar DataTables en la tabla
+        $(document).ready(function () {
+            $('#solarTable').DataTable();
+        });
+    </script>
 
     <!-- Más secciones aquí -->
     <footer>
@@ -60,5 +298,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
