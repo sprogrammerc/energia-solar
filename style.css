@@ -22,6 +22,7 @@
     display: flex;
     gap: 10px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .cta-buttons .btn {
@@ -184,6 +185,62 @@ section img {
     margin-top: 15px;
     border-radius: 10px;
 }
+
+/*seccion contexto */
+#contexto {
+    /* Configuración general */
+    margin: 20px auto; 
+    padding: 20px; 
+    max-width: 90%; 
+    background-color: #f4fff8;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Fuente y estilo del texto */
+    font-family: 'Arial', sans-serif;
+    color: #000000; /* Color del texto */
+    line-height: 1.8; /* Espaciado entre líneas */
+}
+
+#contexto h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: center;
+    text-decoration: overline underline;
+    text-decoration-color: #fac106;
+}
+
+#contexto h2 {
+    font-size: 1.8rem; /* Tamaño de subtítulos */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #00547b;
+    text-decoration: overline underline;
+    text-decoration-color: #fac106;
+}
+
+#contexto h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+#contexto p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: justify; 
+}
+
+#contexto ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+#contexto ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
 /* Calculadora de Ahorro */
 #calculadora {
     padding: 50px;
