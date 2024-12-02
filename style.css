@@ -22,6 +22,7 @@
     display: flex;
     gap: 10px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .cta-buttons .btn {
@@ -77,7 +78,12 @@ section h2 {
     text-decoration-color: #fac106;
 }
 
+<<<<<<< HEAD
 .center-align {
+=======
+section p {
+    text-align: justify;
+>>>>>>> 52d13c93c81294d6b1e25d1460dbce6f787b0d01
     font-size: 1;
     line-height: 1.2;
     font-weight: normal;
@@ -198,6 +204,64 @@ section img {
     margin-top: 15px;
     border-radius: 10px;
 }
+
+/*seccion contexto */
+#contexto {
+    /* Configuración general */
+    text-align: justify;
+    margin: 20px auto; 
+    padding: 20px; 
+    max-width: 90%; 
+    background-color: #d9dfdb;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    /* Fuente y estilo del texto */
+    font-family: 'Arial', sans-serif;
+    color: #000000; /* Color del texto */
+    line-height: 1.8; /* Espaciado entre líneas */
+}
+
+#contexto h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: center;
+    text-decoration: overline underline;
+    text-decoration-color: #fac106;
+}
+
+#contexto h2 {
+    font-size: 1.8rem; /* Tamaño de subtítulos */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #00547b;
+    text-decoration: overline underline;
+    text-decoration-color: #fac106;
+}
+
+#contexto h3 {
+    text-align: justify;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+#contexto p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: justify; 
+}
+
+#contexto ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+#contexto ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
 /* Calculadora de Ahorro */
 #calculadora {
     padding: 50px;
@@ -236,15 +300,23 @@ form button:hover {
 }
 /* Casos de Éxito */
 #casos {
-    padding: 50px;
-    background-color: #F9F9F9;
+    padding: 10px;
+    background-color: #f5f3e8;
     text-align: center;
 }
 
 .gallery {
     display: flex;
-    flex-direction: column; /* Organización vertical de las tarjetas */
-    gap: 20px; /* Espaciado entre tarjetas */
+     /* Organización vertical de las tarjetas */
+    gap: 50px; /* Espaciado entre tarjetas */
+}
+.case .btn {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: rgb(19, 2, 20);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .case {
@@ -252,21 +324,21 @@ form button:hover {
     flex-direction: column; /* Imagen arriba, contenido abajo */
     align-items: center;
     width: 100%; /* Ocupa todo el ancho del contenedor */
-    background: white;
+    background: #faf8f8;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, ;
 }
 
 .case:hover {
-    transform: scale(1.02); /* Efecto de agrandamiento ligero */
+    transform: scale(1.05); /* Efecto de agrandamiento ligero */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .case img {
     width: 100%; /* Imagen ocupa todo el ancho disponible */
-    max-width: 700px; /* Tamaño máximo */
+    max-width: 500px; /* Tamaño máximo */
     height: auto; /* Mantiene proporción */
     border-radius: 15px;
     margin-bottom: 20px; /* Espaciado entre imagen y contenido */

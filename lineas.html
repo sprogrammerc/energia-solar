@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto Solar</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = new google.visualization.DataTable();
+        data.addColumn('number', 'Años');
+        data.addColumn('number', 'E. Eólica');
+        data.addColumn('number', 'E. Solar');
+        data.addColumn('number', 'E. Geotérmica');
+
+        data.addRows([
+          [2021, 132737,	93713,	0   ],
+          [2020, 118731,	73813,	2587],
+          [2019, 104052,	59068,	2555],
+          [2018,  94516,	49812,	2540],
+          [2017,  87597,	41357,	2483],
+          [2016,  81286,	32958,	2517],
+          [2015,  72573,	21684,	2542],
+          [2014,  64232,	15984,	2514],
+          [2013,  59973,	11759,	2607],
+          [2012,  59075,	8137,	  2592],
+          [2011,  45676,	5172,	  2409],
+          [2010,  39135,	2909,	  2405],
+        ]);
+
+        var options = {
+          chart: {},
+          width: 1000,
+          height: 500,
+          hAxis: {
+            format: '####', // Muestra el año completo sin formato adicional
+            title: 'Años'   // Título del eje X
+          },
+          vAxis: {
+            format: 'decimal', // Muestra los números completos sin abreviaturas
+            title: 'Energía (GWh)' // Título del eje Y
+          }
+        };
+
+        var chart = new google.charts.Line(document.getElementById('line_top_x'));
+
+        chart.draw(data, google.charts.Line.convertOptions(options));
+      }
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="home">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="Logo" width="200" height="200">
+            </div>
+            <!-- Navegación -->
+            <div class="header-content">
+                <h1>Energía Solar: El Futuro es Ahora</h1>
+                <p>Descubre cómo transformar la energía del sol en sostenibilidad y ahorro</p>
+                <div class="cta-buttons">
+                    <a href="index.html" class="btn">Historia</a>
+                    <a href="datosglobales.html" class="btn">Datos Globales</a>
+                    <a href="calculadora.html" class="btn">Calculadora</a>
+                    <a href="graficos.html" class="btn">Graficos</a>
+                    <a href="contacto.html" class="btn">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+<section id="casos">
+    
+    <h2>Graficos Energia Renovable</h2>
+    
+              
+        <div class="case">
+            
+            <h3>Gráfico de Lineas:</h3>
+            <p>Tendencia en la Capacidad Instalada de las diferentes fuentes de Energia en EE.UU.</p>
+            <div class="container">
+                <section>
+                    <div id="line_top_x"></div>
+               </section>
+        </div>   
+        <p>El gráfico de lineas muestra la capacidad instalada de las diversas fuentes de energias 
+           renovables de EE.UU, en esta se puede observar el crecimiento de la energia EOLICA, SOLAR Y GEOTERMICA
+           desde el año 2010 a 2021</p>    
+</section>
+
+    <!-- Más secciones aquí -->
+    <footer>
+        <p>&copy; 2024 Impacto Solar. Todos los derechos reservados.</p>
+    </footer>
+   
+</body>
+</html>
