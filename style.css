@@ -76,7 +76,7 @@ section {
 section h2 {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     text-shadow: 2px 2px 5px #353535;
     text-decoration: overline underline;
     text-decoration-color: #fac106;
@@ -324,6 +324,17 @@ form button:hover {
     align-items: center;
     width: 100%; /* Ocupa todo el ancho del contenedor */
     background: #faf8f8;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.1s ease, ;
+}
+.case6 {
+    display: flex;
+    flex-direction: column; /* Imagen arriba, contenido abajo */
+    align-items: center;
+    width: 95; /* Ocupa todo el ancho del contenedor */
+    background: #f8fafa;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
