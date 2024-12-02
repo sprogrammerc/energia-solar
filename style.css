@@ -65,6 +65,10 @@ header h1 {
 
 
 /* Sección ¿Qué es la Energía Solar? */
+.content {
+    background-color: #F0F8FF;
+}
+
 section {
     padding: 8px;
 }
