@@ -21,30 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Datos de energía renovable (solo un ejemplo)
-const datosEnergiaRenovable = [
-    { año: 2010, capacidadInstaladaRenovable: 100, produccionTotal: 1000 },
-    { año: 2015, capacidadInstaladaRenovable: 200, produccionTotal: 1500 },
-    { año: 2020, capacidadInstaladaRenovable: 300, produccionTotal: 2000 },
-];
-
-// Función para calcular el porcentaje de energía renovable
-function calcularPorcentajeEnergiaRenovable(consumoTotal) {
-    const capacidadInstaladaRenovableTotal = datosEnergiaRenovable.reduce((acumulado, dato) => acumulado + dato.capacidadInstaladaRenovable, 0);
-    const produccionTotalRenovable = datosEnergiaRenovable.reduce((acumulado, dato) => acumulado + dato.produccionTotal, 0);
-    const porcentajeEnergiaRenovable = (capacidadInstaladaRenovableTotal / produccionTotalRenovable) * 100;
-    const porcentajeEnergiaRenovableConsumoTotal = (porcentajeEnergiaRenovable / 100) * consumoTotal;
-    return porcentajeEnergiaRenovableConsumoTotal;
-}
-
-// Evento para calcular el porcentaje de energía renovable
-document.getElementById('boton_calcular').addEventListener('click', (e) => {
-    e.preventDefault();
-    const consumoTotal = parseFloat(document.getElementById('consumo_total').value);
-    const porcentajeEnergiaRenovable = calcularPorcentajeEnergiaRenovable(consumoTotal);
-    document.getElementById('resultado').innerHTML = `El porcentaje de energía renovable en su consumo eléctrico total es: ${porcentajeEnergiaRenovable.toFixed(2)}%`;
-});
-
 // Añadir interactividad al diagrama (simulación de clic)
 document.querySelector(".diagram img").addEventListener("click", function () {
     alert("El efecto fotovoltaico convierte la luz solar en energía utilizable.");
@@ -69,32 +45,6 @@ document.querySelectorAll(".system").forEach(system => {
     system.addEventListener("mouseout", () => {
         system.style.backgroundColor = "#FFD700";
     });
-});
-document.getElementById("calcular").addEventListener("click", () => {
-    const consumo = parseFloat(document.getElementById("consumo").value);
-    const ubicacion = document.getElementById("ubicacion").value;
-
-    if (isNaN(consumo) || consumo <= 0) {
-        document.getElementById("resultado").textContent = "Por favor, ingresa un consumo válido.";
-        return;
-    }
-
-    let factor;
-    switch (ubicacion) {
-        case "alta":
-            factor = 0.9;
-            break;
-        case "media":
-            factor = 0.7;
-            break;
-        case "baja":
-            factor = 0.5;
-            break;
-    }
-
-    const ahorro = consumo * factor;
-    document.getElementById("resultado").textContent = 
-        `Podrías ahorrar aproximadamente ${ahorro.toFixed(2)} kWh al mes con energía solar.`;
 });
 
 // Validación del formulario de contacto
