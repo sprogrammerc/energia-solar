@@ -27,7 +27,7 @@
 
 .cta-buttons .btn {
     padding: 10px 20px;
-    background-color: #fac106;
+    background-color: #fac10600;
     color: black;
     text-decoration: none;
     border-radius: 5px;
@@ -35,7 +35,7 @@
 }
 
 .cta-buttons .btn:hover {
-    background-color: #aaffc5;
+    background-color: #fac106;
 }
 
 body {
@@ -311,13 +311,15 @@ form button:hover {
 }
 .case .btn {
     padding: 10px 20px;
-    background-color: #FFD700;
+    background-color: #ffd90000;
     color: rgb(19, 2, 20);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 500px;
     transition: background-color 0.3s ease;
 }
-
+.case .btn:hover {
+    background-color: #fac106;
+}
 .case {
     display: flex;
     flex-direction: column; /* Imagen arriba, contenido abajo */
