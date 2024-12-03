@@ -219,6 +219,52 @@ section img {
     color: #000000; /* Color del texto */
     line-height: 1.8; /* Espaciado entre líneas */
 }
+.paneles-colombia {
+    width: 100%;
+    background:#fac10644;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    text-decoration: overline underline;
+    text-decoration-color: #fac106;
+    text-shadow: 2px 2px 5px #353535;
+
+}
+.paneles-col {
+    box-shadow: 10px 5px 5px rgba(73, 73, 73, 0.5);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+.panel {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(73, 73, 73, 0.5);
+}
+.generacion {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(73, 73, 73, 0.5);
+}
+.consumo {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px rgba(73, 73, 73, 0.5);
+}
+
+
+    
 
 #contexto h1 {
     font-size: 2.5rem;
