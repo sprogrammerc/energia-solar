@@ -30,49 +30,292 @@
         </div>
     </header>
     
-<section id="contacto">
-    <h2>Contacto</h2>
-    <p>¡Queremos escucharte! Llena el formulario o contáctanos directamente.</p>
-    <form id="contactForm">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" placeholder="Ingresa tu nombre" required>
-        
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" placeholder="Ingresa tu correo" required>
-        
-        <label for="message">Mensaje:</label>
-        <textarea id="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
-        
-        <button type="submit">Enviar</button>
-    </form>
-    <div id="mapa"></div>
-    <p class="info-extra">Teléfono: +57 3113799303| Email: jose.seir@gmail.com</p>
+    <html>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+              <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+              <script type="text/javascript">
+                  window.tailwind.config = {
+                      darkMode: ['class'],
+                      theme: {
+                          extend: {
+                              colors: {
+                                  border: 'hsl(var(--border))',
+                                  input: 'hsl(var(--input))',
+                                  ring: 'hsl(var(--ring))',
+                                  background: 'hsl(var(--background))',
+                                  foreground: 'hsl(var(--foreground))',
+                                  primary: {
+                                      DEFAULT: 'hsl(var(--primary))',
+                                      foreground: 'hsl(var(--primary-foreground))'
+                                  },
+                                  secondary: {
+                                      DEFAULT: 'hsl(var(--secondary))',
+                                      foreground: 'hsl(var(--secondary-foreground))'
+                                  },
+                                  destructive: {
+                                      DEFAULT: 'hsl(var(--destructive))',
+                                      foreground: 'hsl(var(--destructive-foreground))'
+                                  },
+                                  muted: {
+                                      DEFAULT: 'hsl(var(--muted))',
+                                      foreground: 'hsl(var(--muted-foreground))'
+                                  },
+                                  accent: {
+                                      DEFAULT: 'hsl(var(--accent))',
+                                      foreground: 'hsl(var(--accent-foreground))'
+                                  },
+                                  popover: {
+                                      DEFAULT: 'hsl(var(--popover))',
+                                      foreground: 'hsl(var(--popover-foreground))'
+                                  },
+                                  card: {
+                                      DEFAULT: 'hsl(var(--card))',
+                                      foreground: 'hsl(var(--card-foreground))'
+                                  },
+                              },
+                          }
+                      }
+                  }
+              </script>
+              <style type="text/tailwindcss">
+                  @layer base {
+                      :root {
+                          --background: 0 0% 100%;
+      --foreground: 240 10% 3.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 240 10% 3.9%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 240 10% 3.9%;
+      --primary: 240 5.9% 10%;
+      --primary-foreground: 0 0% 98%;
+      --secondary: 240 4.8% 95.9%;
+      --secondary-foreground: 240 5.9% 10%;
+      --muted: 240 4.8% 95.9%;
+      --muted-foreground: 240 3.8% 46.1%;
+      --accent: 240 4.8% 95.9%;
+      --accent-foreground: 240 5.9% 10%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 240 5.9% 90%;
+      --input: 240 5.9% 90%;
+      --ring: 240 5.9% 10%;
+      --radius: 0.5rem;
+                      }
+                      .dark {
+                          --background: 240 10% 3.9%;
+      --foreground: 0 0% 98%;
+      --card: 240 10% 3.9%;
+      --card-foreground: 0 0% 98%;
+      --popover: 240 10% 3.9%;
+      --popover-foreground: 0 0% 98%;
+      --primary: 0 0% 98%;
+      --primary-foreground: 240 5.9% 10%;
+      --secondary: 240 3.7% 15.9%;
+      --secondary-foreground: 0 0% 98%;
+      --muted: 240 3.7% 15.9%;
+      --muted-foreground: 240 5% 64.9%;
+      --accent: 240 3.7% 15.9%;
+      --accent-foreground: 0 0% 98%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 240 3.7% 15.9%;
+      --input: 240 3.7% 15.9%;
+      --ring: 240 4.9% 83.9%;
+                      }
+                  }
+              </style>
+        </head>
+        <body>
+          <div class="flex items-center p-6 bg-white dark:bg-card rounded-lg shadow-md">
+          <img 
+              src="https://placehold.co/150x150" 
+              alt="Developer working on a computer" 
+              class="w-1/3 rounded-lg mr-4"
+          />
+          <div class="flex-1">
+              <div class="flex items-center mb-2">
+                  <img 
+                      src="https://openui.fly.dev/openui/24x24.svg?text=WP" 
+                      alt="WordPress logo" 
+                      class="mr-2"
+                  />
+                  <h2 class="text-lg font-semibold text-primary">Soporte Experto de WordPress</h2>
+              </div>
+              <p class="text-muted-foreground">
+                  Nuestro equipo de soporte va más allá de simplemente conocer WordPress; somos colaboradores activos del proyecto. Hemos aportado código, organizado eventos de la comunidad y desarrollado nuestros propios plugins para WordPress. Esta implicación directa nos posiciona en la vanguardia de la innovación de WordPress.
+              </p>
+          </div>
+      </div>
+        </body>
+      </html>
+
 </section>
-
-<section id="faq">
-    <h2>Preguntas Frecuentes</h2>
-    <div class="faq-container">
-        <div class="faq">
-            <h3>¿Cuánto cuesta instalar paneles solares? <span class="toggle">+</span></h3>
-            <p class="answer">El costo depende del tamaño del sistema y las necesidades energéticas. En promedio, varía entre $5,000 y $15,000 USD.</p>
-        </div>
-        <div class="faq">
-            <h3>¿Qué mantenimiento requieren los paneles solares? <span class="toggle">+</span></h3>
-            <p class="answer">Los paneles requieren limpieza regular para maximizar la eficiencia y revisiones cada 2 años.</p>
-        </div>
-        <div class="faq">
-            <h3>¿Funcionan los paneles en días nublados? <span class="toggle">+</span></h3>
-            <p class="answer">Sí, aunque generan menos energía. Dependen de la luz solar, no del calor.</p>
-        </div>
-    </div>
-</section>
-
-
     <!-- Más secciones aquí -->
     <footer>
-        <p>&copy; 2024 Impacto Solar. Todos los derechos reservados.</p>
+        <h5>Conoce a nuestro equipo</h5>
     </footer>
     <script src="script.js"></script>
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+              <script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+              <script type="text/javascript">
+                  window.tailwind.config = {
+                      darkMode: ['class'],
+                      theme: {
+                          extend: {
+                              colors: {
+                                  border: 'hsl(var(--border))',
+                                  input: 'hsl(var(--input))',
+                                  ring: 'hsl(var(--ring))',
+                                  background: 'hsl(var(--background))',
+                                  foreground: 'hsl(var(--foreground))',
+                                  primary: {
+                                      DEFAULT: 'hsl(var(--primary))',
+                                      foreground: 'hsl(var(--primary-foreground))'
+                                  },
+                                  secondary: {
+                                      DEFAULT: 'hsl(var(--secondary))',
+                                      foreground: 'hsl(var(--secondary-foreground))'
+                                  },
+                                  destructive: {
+                                      DEFAULT: 'hsl(var(--destructive))',
+                                      foreground: 'hsl(var(--destructive-foreground))'
+                                  },
+                                  muted: {
+                                      DEFAULT: 'hsl(var(--muted))',
+                                      foreground: 'hsl(var(--muted-foreground))'
+                                  },
+                                  accent: {
+                                      DEFAULT: 'hsl(var(--accent))',
+                                      foreground: 'hsl(var(--accent-foreground))'
+                                  },
+                                  popover: {
+                                      DEFAULT: 'hsl(var(--popover))',
+                                      foreground: 'hsl(var(--popover-foreground))'
+                                  },
+                                  card: {
+                                      DEFAULT: 'hsl(var(--card))',
+                                      foreground: 'hsl(var(--card-foreground))'
+                                  },
+                              },
+                          }
+                      }
+                  }
+              </script>
+              <style type="text/tailwindcss">
+                  @layer base {
+                      :root {
+                          --background: 0 0% 100%;
+      --foreground: 240 10% 3.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 240 10% 3.9%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 240 10% 3.9%;
+      --primary: 240 5.9% 10%;
+      --primary-foreground: 0 0% 98%;
+      --secondary: 240 4.8% 95.9%;
+      --secondary-foreground: 240 5.9% 10%;
+      --muted: 240 4.8% 95.9%;
+      --muted-foreground: 240 3.8% 46.1%;
+      --accent: 240 4.8% 95.9%;
+      --accent-foreground: 240 5.9% 10%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 240 5.9% 90%;
+      --input: 240 5.9% 90%;
+      --ring: 240 5.9% 10%;
+      --radius: 0.5rem;
+                      }
+                      .dark {
+                          --background: 240 10% 3.9%;
+      --foreground: 0 0% 98%;
+      --card: 240 10% 3.9%;
+      --card-foreground: 0 0% 98%;
+      --popover: 240 10% 3.9%;
+      --popover-foreground: 0 0% 98%;
+      --primary: 0 0% 98%;
+      --primary-foreground: 240 5.9% 10%;
+      --secondary: 240 3.7% 15.9%;
+      --secondary-foreground: 0 0% 98%;
+      --muted: 240 3.7% 15.9%;
+      --muted-foreground: 240 5% 64.9%;
+      --accent: 240 3.7% 15.9%;
+      --accent-foreground: 0 0% 98%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 240 3.7% 15.9%;
+      --input: 240 3.7% 15.9%;
+      --ring: 240 4.9% 83.9%;
+                      }
+                  }
+              </style>
+        </head>
+          <div class="flex flex-wrap justify-center space-x-4">
+        <div class="bg-card p-6 rounded-lg shadow-lg w-64">
+          <img src="../energia-solar/Imagenes/sebas-patino.jpg" alt="Persona 1" />
+          <h2 class="text-lg font-bold mt-4">Sebastián Patiño</h2>
+          <p class="text-muted-foreground">Estudiante de administración de empresas.</p>
+          <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 mt-4 p-2 rounded">Integrante 1</button>
+        </div>
+        <div class="bg-card p-6 rounded-lg shadow-lg w-64">
+          <img src="../energia-solar/Imagenes/miguel-cardona.jpg" alt="Persona 2" />
+          <h2 class="text-lg font-bold mt-4">Miguel Cardona</h2>
+          <p class="text-muted-foreground">Mercaderista en Super de Alimentos.</p>
+          <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 mt-4 p-2 rounded">Integrante 2</button>
+        </div>
+        <div class="bg-card p-6 rounded-lg shadow-lg w-64">
+          <img src="../energia-solar/Imagenes/sebas-cortes.jpg" alt="Persona 3" />
+          <h2 class="text-lg font-bold mt-4">Sebastián Cortés</h2>
+          <p class="text-muted-foreground">Servicios Profesionales pueden ayudarte a construir, promover y proteger tu sitio web.</p>
+          <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 mt-4 p-2 rounded">Integrante 3</button>
+        </div>
+        <div class="bg-card p-6 rounded-lg shadow-lg w-64">
+          <img src="../energia-solar/Imagenes/jose-seir.jpg" alt="Persona 4" />
+          <h2 class="text-lg font-bold mt-4">José Seir</h2>
+          <p class="text-muted-foreground">Descubre nuestros nuevos servicios diseñados para ti.</p>
+          <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 mt-4 p-2 rounded">Integrante 4</button>
+        </div>
+      </div>
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¡Queremos escucharte! Llena el formulario o contáctanos directamente.</p>
+        <form id="contactForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" placeholder="Ingresa tu nombre" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" placeholder="Ingresa tu correo" required>
+            
+            <label for="message">Mensaje:</label>
+            <textarea id="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="mapa"></div>
+        <p class="info-extra">Teléfono: +57 3113799303| Email: jose.seir@gmail.com</p>
+    </section>
+    
+    <section id="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <div class="faq">
+                <h3>¿Cuánto cuesta instalar paneles solares? <span class="toggle">+</span></h3>
+                <p class="answer">El costo depende del tamaño del sistema y las necesidades energéticas. En promedio, varía entre $5,000 y $15,000 USD.</p>
+            </div>
+            <div class="faq">
+                <h3>¿Qué mantenimiento requieren los paneles solares? <span class="toggle">+</span></h3>
+                <p class="answer">Los paneles requieren limpieza regular para maximizar la eficiencia y revisiones cada 2 años.</p>
+            </div>
+            <div class="faq">
+                <h3>¿Funcionan los paneles en días nublados? <span class="toggle">+</span></h3>
+                <p class="answer">Sí, aunque generan menos energía. Dependen de la luz solar, no del calor.</p>
+            </div>
+        </div>
 </body>
 </html>
 

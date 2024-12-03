@@ -457,4 +457,24 @@ form button:hover {
     padding-top: 10px;
     color: #666;
 }
+.image-class {
+    object-fit: cover;
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    height: 8rem; /* Ajusta la altura */
+}
 
+footer {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 20px 10px; /* Espaciado interno */
+    font-family: Arial, sans-serif; /* Fuente */
+    border-top: 2px solid #0066cc; /* Línea superior */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+footer h5 {
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    margin: 0; /* Sin margen adicional */
+}
