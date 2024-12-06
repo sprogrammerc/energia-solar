@@ -12,13 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Calculadora interactiva
     const calcularBtn = document.getElementById("calcular");
-    if (calcularBtn) {
-        calcularBtn.addEventListener("click", function () {
-            const consumo = parseFloat(document.getElementById("consumo").value);
-            const ahorro = consumo * 0.8; // Ejemplo de cálculo: 80% de ahorro
-            alert(`Con energía solar, podrías ahorrar $${ahorro.toFixed(2)} al mes.`);
-        });
-    }
+
 });
 
 // Añadir interactividad al diagrama (simulación de clic)
@@ -105,10 +99,10 @@ function calculateRenewable() {
     // Mostrar los resultados
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = `
-      <p><strong>Energía Eólica:</strong> ${eolicaPercentage.toFixed(2)} kWh (${((eolicaPercentage / totalConsumption) * 100).toFixed(2)}%)</p>
-      <p><strong>Energía Solar:</strong> ${solarPercentage.toFixed(2)} kWh (${((solarPercentage / totalConsumption) * 100).toFixed(2)}%)</p>
-      <p><strong>Energía Hidroeléctrica:</strong> ${hidroelectricaPercentage.toFixed(2)} kWh (${((hidroelectricaPercentage / totalConsumption) * 100).toFixed(2)}%)</p>
-      <p><strong>Energía Geotérmica:</strong> ${geotermicaPercentage.toFixed(2)} kWh (${((geotermicaPercentage / totalConsumption) * 100).toFixed(2)}%)</p>
+      <p><strong>Energía Eólica:</strong> ${eolicaPercentage.toFixed(2)} kWh (${((eolicaPercentage / totalConsumption) * 100).toFixed(2)}% Porcentaje de uso de esta energia en tu hogar)</p>
+      <p><strong>Energía Solar:</strong> ${solarPercentage.toFixed(2)} kWh (${((solarPercentage / totalConsumption) * 100).toFixed(2)}% Porcentaje de uso de esta energia en tu hogar)</p>
+      <p><strong>Energía Hidroeléctrica:</strong> ${hidroelectricaPercentage.toFixed(2)} kWh (${((hidroelectricaPercentage / totalConsumption) * 100).toFixed(2)}% Porcentaje de uso de esta energia en tu hogar)</p>
+      <p><strong>Energía Geotérmica:</strong> ${geotermicaPercentage.toFixed(2)} kWh (${((geotermicaPercentage / totalConsumption) * 100).toFixed(2)}% Porcentaje de uso de esta energia en tu hogar)</p>
     `;
   }
 
